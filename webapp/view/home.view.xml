@@ -1,0 +1,187 @@
+<mvc:View
+    controllerName="com.incture.odataapp.controller.home"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:t="sap.ui.table"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <!-- <List
+                id="list"
+                items="{oJsonFilterModel>/listData}"
+                growing="true"
+                growingThreshold="5"
+            >
+                <headerToolbar>
+                    <Toolbar>
+                        <SearchField
+                            id="search"
+                            width="300px"
+                            liveChange="filterThroughSearch"
+                        />
+                    </Toolbar>
+                </headerToolbar>
+                <items>
+                    <StandardListItem
+                        description="{oJsonFilterModel>CompanyName}"
+                        title="{oJsonFilterModel>CustomerID}"
+                    />
+                </items>
+            </List> -->
+            <List
+                id="list"
+                items="{path:'oJsonModelInvoices>/listData', sorter:[{path:'ShipperName', descending:true, group:true}]}"
+            >
+                <items>
+                    <StandardListItem
+                        description="{oJsonModelInvoices>ShipperName}"
+                        title="{oJsonModelInvoices>Salesperson}"
+                    />
+                </items>
+            </List>
+            <!-- <t:Table rows="{oJsonModel>/listData}">
+                <t:columns>
+                    <t:Column width="10rem">
+                        <Label text="Employee ID" />
+                        <t:template>
+                            <Text
+                                text="{oJsonModel>EmployeeID}"
+                                wrapping="false"
+                            />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10rem">
+                        <Label text="Employee First Name" />
+                        <t:template>
+                            <Text
+                                text="{oJsonModel>FirstName}"
+                                wrapping="false"
+                            />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10rem">
+                        <Label text="Employee Last Name" />
+                        <t:template>
+                            <Text
+                                text="{oJsonModel>LastName}"
+                                wrapping="false"
+                            />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10rem">
+                        <Label text="Job Title" />
+                        <t:template>
+                            <Text
+                                text="{oJsonModel>Title}"
+                                wrapping="false"
+                            />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10rem">
+                        <Label text="Courtesy" />
+                        <t:template>
+                            <Text
+                                text="{oJsonModel>TitleOfCourtesy}"
+                                wrapping="false"
+                            />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10rem">
+                        <Label text="BirthDate" />
+                        <t:template>
+                            <Text
+                                text="{oJsonModel>BirthDate}"
+                                wrapping="false"
+                            />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10rem">
+                        <Label text="HireDate" />
+                        <t:template>
+                            <Text
+                                text="{oJsonModel>HireDate}"
+                                wrapping="false"
+                            />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10rem">
+                        <Label text="Courtesy" />
+                        <t:template>
+                            <Text
+                                text="{oJsonModel>TitleOfCourtesy}"
+                                wrapping="false"
+                            />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10rem">
+                        <Label text="Address" />
+                        <t:template>
+                            <Text
+                                text="{oJsonModel>Address}"
+                                wrapping="false"
+                            />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10rem">
+                        <Label text="City" />
+                        <t:template>
+                            <Text
+                                text="{oJsonModel>City}"
+                                wrapping="false"
+                            />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10rem">
+                        <Label text="Region" />
+                        <t:template>
+                            <Text
+                                text="{oJsonModel>Region}"
+                                wrapping="false"
+                            />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10rem">
+                        <Label text="Postal code" />
+                        <t:template>
+                            <Text
+                                text="{oJsonModel>PostalCode}"
+                                wrapping="false"
+                            />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10rem">
+                        <Label text="Country" />
+                        <t:template>
+                            <Text
+                                text="{oJsonModel>Country}"
+                                wrapping="false"
+                            />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10rem">
+                        <Label text="Phone" />
+                        <t:template>
+                            <Text
+                                text="{oJsonModel>HomePhone}"
+                                wrapping="false"
+                            />
+                        </t:template>
+                    </t:Column>
+                    <t:Column width="10rem">
+                        <Label text="Extension" />
+                        <t:template>
+                            <Text
+                                text="{oJsonModel>Extension}"
+                                wrapping="false"
+                            />
+                        </t:template>
+                    </t:Column>
+                </t:columns>
+            </t:Table> -->
+        </content>
+    </Page>
+</mvc:View>
